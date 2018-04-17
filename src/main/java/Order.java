@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Order {
 
     private int orderId;
@@ -6,6 +8,15 @@ public class Order {
 
     public Order(int orderId, int quantity, MenuItem menuItem){
         this.orderId = orderId;
+        this.quantity = quantity;
+        this.menuItem = menuItem;
+
+    }
+
+    public Order(int quantity, MenuItem menuItem){
+        Random rand = new Random();
+        int randomId = rand.nextInt(99) + 1;
+        this.orderId = randomId;
         this.quantity = quantity;
         this.menuItem = menuItem;
 
@@ -22,5 +33,7 @@ public class Order {
     public MenuItem getMenuItem(){
         return this.menuItem;
     }
+
+
 
 }

@@ -17,6 +17,7 @@ public class KitchenTest {
 
     @Test
     public void canCookOrder() {
-//        TODO
+       Dish dish = kitchen.cookOrder(order1);
+        assertEquals(MenuItem.LASAGNE, dish.getMenuItem());
     }
 }
